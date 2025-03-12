@@ -1,0 +1,43 @@
+{
+  "TypeScript": {
+    "useInterfaces": true,
+    "avoidEnums": true,
+    "preferTypes": "interface",
+    "strictNullChecks": true,
+    "functionKeyword": true
+  },
+  "React": {
+    "useHooks": ["useState", "useEffect", "useContext", "useMemo", "useCallback"],
+    "functionComponent": true,
+    "jsx": "minimal",
+    "cssModules": true,
+    "eslintRules": ["react-hooks/rules-of-hooks", "react-hooks/exhaustive-deps"],
+    "namingConventions": {
+      "components": "PascalCase",
+      "directories": "kebab-case"
+    },
+    "errorBoundaries": true,
+    "lazyLoading": {
+      "images": "webp",
+      "components": "dynamic"
+    }
+  },
+  "Next.js": {
+    "appRouter": "use",
+    "dataFetching": "getServersideProps | getStaticProps",
+    "serverComponents": true,
+    "performanceOptimizations": ["webVitals", "ssr"]
+  },
+  "Styling": {
+    "scss": {
+      "modules": true,
+      "namingConvention": "BEM",
+      "nesting": true
+    },
+    "inlineStyles": false
+  },
+  "General": {
+    "preferFunctionalProgramming": true,
+    "shortCircuitEvaluation": true
+  }
+}

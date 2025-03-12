@@ -1,0 +1,10 @@
+
+/dist
+/build
+/coverage
+/logs
+/temp
+
+
+node_modules/
+.next/

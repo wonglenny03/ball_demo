@@ -1,0 +1,183 @@
+.filterContainer {
+  margin-bottom: 16px;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filterToggle {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  
+  &:hover {
+    background-color: #e5e7eb;
+  }
+  
+  span {
+    margin-left: 8px;
+  }
+}
+
+.activeFilterBadge {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0ea5e9;
+  margin-left: 8px;
+}
+
+.clearFilter {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s;
+  
+  &:hover {
+    color: #ef4444;
+  }
+  
+  span {
+    margin-left: 4px;
+  }
+}
+
+.filterPanel {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.filterSection {
+  border-bottom: 1px solid #e5e7eb;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1f2937;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #f9fafb;
+  }
+}
+
+.sectionContent {
+  padding: 8px 16px 16px;
+  background-color: #f9fafb;
+}
+
+.quickOptions,
+.statusOptions,
+.countryOptions,
+.leagueOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #4b5563;
+  cursor: pointer;
+  
+  input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #0ea5e9;
+  }
+  
+  &:hover {
+    color: #0ea5e9;
+  }
+}
+
+// 深色模式样式
+:global(.dark) {
+  .filterToggle {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    
+    &:hover {
+      background-color: #374151;
+    }
+  }
+  
+  .clearFilter {
+    color: #9ca3af;
+    
+    &:hover {
+      color: #f87171;
+    }
+  }
+  
+  .filterPanel {
+    background-color: #111827;
+    border-color: #374151;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .filterSection {
+    border-color: #374151;
+  }
+  
+  .sectionHeader {
+    color: #e5e7eb;
+    
+    &:hover {
+      background-color: #1f2937;
+    }
+  }
+  
+  .sectionContent {
+    background-color: #1f2937;
+  }
+  
+  .checkboxLabel {
+    color: #d1d5db;
+    
+    &:hover {
+      color: #38bdf8;
+    }
+  }
+} 

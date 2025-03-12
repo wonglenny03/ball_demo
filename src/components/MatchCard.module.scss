@@ -1,0 +1,263 @@
+.matchCardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.matchCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+  background-color: #ffffff;
+  margin-bottom: 12px;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &.live {
+    border-left: 3px solid #e53e3e;
+  }
+
+  &.finished {
+    border-left: 3px solid #718096;
+  }
+
+  &.upcoming {
+    border-left: 3px solid #4299e1;
+  }
+
+  &.compact {
+    .header {
+      padding: 8px 12px;
+    }
+
+    .content {
+      padding: 8px 12px;
+    }
+
+    .teamName {
+      font-size: 13px;
+    }
+
+    .footer {
+      padding: 6px 12px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.league {
+  display: flex;
+  align-items: center;
+}
+
+.leagueLogo {
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.leagueName {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.favoriteBtn {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  font-size: 16px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #f59e0b;
+  }
+
+  &.isFavorite {
+    color: #f59e0b;
+  }
+}
+
+.content {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+
+.team {
+  flex: 1;
+}
+
+.teamInfo {
+  display: flex;
+  align-items: center;
+  
+  &:first-child {
+    justify-content: flex-end;
+  }
+}
+
+.teamLogo {
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: #f9fafb;
+}
+
+.teamName {
+  margin: 0 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.matchInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  min-width: 90px;
+}
+
+.minute {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e53e3e;
+  margin-bottom: 4px;
+  background-color: rgba(229, 62, 62, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.scoreValue {
+  min-width: 20px;
+  text-align: center;
+}
+
+.scoreSeparator {
+  margin: 0 4px;
+  color: #64748b;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4299e1;
+}
+
+.status {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.halfTimeScore {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.footer {
+  padding: 10px 16px;
+  border-top: 1px solid #eaeaea;
+  background-color: #f9fafb;
+}
+
+.odds {
+  display: flex;
+  justify-content: space-between;
+}
+
+.oddsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  padding: 0 8px;
+  
+  &:not(:last-child) {
+    border-right: 1px solid #eaeaea;
+  }
+}
+
+.oddsLabel {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.oddsValue {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+// 深色模式
+:global(.dark) {
+  .matchCard {
+    background-color: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .header, .footer {
+    background-color: #0f172a;
+    border-color: #334155;
+  }
+
+  .leagueName {
+    color: #94a3b8;
+  }
+
+  .teamName {
+    color: #e2e8f0;
+  }
+
+  .teamLogo {
+    background-color: #1e293b;
+  }
+
+  .oddsLabel {
+    color: #64748b;
+  }
+
+  .oddsItem {
+    border-color: #334155;
+  }
+
+  .oddsValue {
+    color: #e2e8f0;
+  }
+} 
