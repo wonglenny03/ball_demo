@@ -1,11 +1,12 @@
 "use client"
+import React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { FaHome, FaFootballBall, FaStar, FaCog, FaSearch } from "react-icons/fa"
 import styles from "./NavBar.module.scss"
 
-function NavBar(): JSX.Element {
+function NavBar(): React.ReactElement {
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
 
